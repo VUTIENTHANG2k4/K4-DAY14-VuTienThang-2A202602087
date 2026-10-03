@@ -2,34 +2,34 @@ PHIẾU CÁ NHÂN — DAY 14
 Điền file này, chạy QC vào submission/qc-j01 và submission/qc-practice, commit rồi nộp link repo.
 Không dán ảnh, toạ độ điểm hay nội dung file export vào đây.
 
-Họ tên / mã học viên:
-Object J01 (a/b/c/d theo docs/cases.md) / track ID trong task J01:
-Phiên bản CVAT / overlay đã bật (có/không):
+Họ tên / mã học viên: VuTienThang / 2A202602087
+Object J01 (a/b/c/d theo docs/cases.md) / track ID trong task J01: J01-d / 0
+Phiên bản CVAT / overlay đã bật (có/không): 2.74.1 / có
 
 J01 — TRACK LÕI
-Frame fit và lý do:
-L / W / H (m):
-Keyframe quan trọng và lý do:
-Đã bấm F qua đủ frame 0–65 (có/không):
-Đoạn thưa / che khuất / dễ nhầm identity:
+Frame fit và lý do: Frame 28 là frame đầu của track theo giả định không có point cloud đủ dùng trước đó.
+L / W / H (m): Frame bắt đầu track (28): 4.15 / 1.93 / 1.82; theo export J01.
+Keyframe quan trọng và lý do: Export có 34 keyframe trong đoạn 28–65; frame 28 là đầu track, frame 65 là cuối đoạn. Lý do từng keyframe chưa được ghi riêng.
+Đã bấm F qua đủ frame 0–65 (có/không): Đã rà đoạn có track 28–65; không có track trước frame 28 theo giả định point cloud không đủ dùng.
+Đoạn thưa / che khuất / dễ nhầm identity: Trước frame 28 coi như không có point cloud đủ dùng, nên không suy diễn track ngược. Ở frame xa 28, người học xác nhận cloud/overlay đủ căn cứ và box khớp.
 
 SELF-QC (từ qc_tracks.csv / qc_flags.csv)
-Lần QC đầu — cờ của track J01 (loại, frame):
-Quyết định cho từng cờ (sửa / giữ vì hợp lệ / chưa đủ evidence) và lý do:
-Đã sửa gì sau QC đầu; QC cuối còn cờ nào:
-Nhận xét của bạn cùng cặp và bạn đồng ý/không đồng ý vì sao:
+Lần QC đầu — cờ của track J01 (loại, frame): Không có cờ.
+Quyết định cho từng cờ (sửa / giữ vì hợp lệ / chưa đủ evidence) và lý do: Không có cờ để xử lý.
+Đã sửa gì sau QC đầu; QC cuối còn cờ nào: Không rework sau khi rà bằng mắt; export J01 hiện có track 0, 38 frame (28–65), 34 keyframe, không có cờ QC.
+Nhận xét của bạn cùng cặp và bạn đồng ý/không đồng ý vì sao: Bạn cùng cặp đồng ý box khớp; giữ annotation.
 
 CAMERA–LIDAR (overlay trên image_1)
-Ca bình thường (frame / quan sát):
-Ca khó (frame / quan sát 2D / quan sát 3D):
-Giả thuyết nguyên nhân (annotation / FOV / occlusion / sparse / nghi calibration / chưa đủ evidence):
-Hành động (sửa / giữ / báo Lab Coach) và lý do:
+Ca bình thường (frame / quan sát): Frame 45 — người học xác nhận overlay khớp tương đối với đúng xe J01-d.
+Ca khó (frame / quan sát 2D / quan sát 3D): Frame 28, xe xa — người học xác nhận point cloud và overlay đủ căn cứ, box khớp.
+Giả thuyết nguyên nhân (annotation / FOV / occlusion / sparse / nghi calibration / chưa đủ evidence): Không thấy discrepancy ở hai frame đã kiểm.
+Hành động (sửa / giữ / báo Lab Coach) và lý do: Giữ; box được xác nhận khớp bởi người học và bạn cùng cặp.
 
 CASE NGẮN (task practice)
-Case → track ID (ví dụ B01 → 3):
-Case đã xong:
-Case đang dở / chỗ kẹt:
-fragmentation_suspect ở đầu/cuối case đã kiểm là do cách cắt case (có/không):
+Case → track ID (ví dụ B01 → 3): B01 → 0
+Case đã xong: B01 (frame 16–21; theo export task practice).
+Case đang dở / chỗ kẹt: Chưa ghi nhận thêm case.
+fragmentation_suspect ở đầu/cuối case đã kiểm là do cách cắt case (có/không): Có, B01 bắt đầu ở frame 16 và kết thúc ở frame 21 theo phạm vi bài.
 
 THỜI GIAN
-J01 / case ngắn / QC và fusion:
+J01 / case ngắn / QC và fusion: Không nhớ / 5 phút / 10 phút.
